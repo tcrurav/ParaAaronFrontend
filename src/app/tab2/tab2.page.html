@@ -1,0 +1,25 @@
+<ion-header>
+  <mat-toolbar color="primary" class="head">
+    <img src="../../assets/img/OrchestraLogo.png" alt="Orchestra Logo">
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class = "container">
+    <button mat-raised-button *ngIf = "!logged" class = "menu-buttons4" color = "primary" (click) = "loginPage()" >Iniciar <br> sesión</button>
+    <button mat-raised-button *ngIf = "logged" class = "menu-buttons" color = "primary" (click) = "dataPage()">Datos <br> personales</button>
+    <button mat-raised-button *ngIf = "logged" id="logout-btn" (click)="logout()" class = "menu-buttons2" color = "primary">Cerrar <br> sesión</button>
+    <button mat-raised-button *ngIf = "logged && admin" class = "menu-buttons3" id = "regist-button" color = "primary" (click) = "registPage()">Registrar <br> usuarios</button>
+    <ion-item lines = "none" id="logout-alert" style="display:none;">
+      <ion-card class = "ok-menu">
+        Has cerrado sesión<br/>
+        <ion-button (click) = "confirmLogout()" type="button" color="tertiary" shape="tertiary" expand="block">OK</ion-button>
+      </ion-card>
+    </ion-item>
+    <!-- <ion-icon (click)="logout()" name="log-out-outline"></ion-icon> -->
+  </div>
+
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+</ion-content>

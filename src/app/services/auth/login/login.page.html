@@ -1,0 +1,35 @@
+<ion-header>
+  <mat-toolbar color="primary">
+    <button (click)="return()" slot = "start" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Iniciar sesión</span>
+    <img src="../../assets/img/OrchestraLogo2.png" class="img" alt="Photo of a Shiba Inu">
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1></h1>
+    <br/>
+    <br/>
+    <div>
+      <form [formGroup]="loginForm" (submit)="onFormSubmit()" class = "form">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label class = "label" >Email</mat-label>
+          <input matInput type="email" formControlName="email">
+          <mat-error *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid">
+            <span *ngIf="loginForm.controls.email.errors.required">This field is mandatory.</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label class = "label" >Contraseña</mat-label>
+          <input matInput type = "password" formControlName="password">
+          <mat-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
+            <span *ngIf="loginForm.controls.password.errors.required">This field is mandatory.</span>
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Iniciar sesión</button>
+      </form>
+    </div>
+</ion-content>

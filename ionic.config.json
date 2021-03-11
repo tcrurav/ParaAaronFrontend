@@ -1,0 +1,7 @@
+{
+  "name": "OrchestraFrontend",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
