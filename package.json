@@ -31,10 +31,16 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/lab": "^3.2.10",
     "@ionic/storage": "^2.3.1",
+    "body-parser": "^1.19.0",
     "cordova-browser": "6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.10.3",
+    "@ionic/app-scripts": "2.1.4",
+    "typescript": "~3.9.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",
@@ -65,8 +71,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~3.9.5"
+    "tslint": "~6.1.0"
   },
   "description": "An Ionic project",
   "cordova": {
