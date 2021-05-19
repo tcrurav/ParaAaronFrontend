@@ -16,8 +16,11 @@ export class Tab1Page {
     this.storage.get('token').then (
       data => {
         if(data != null) {
+          console.log(data)
+          console.log("Tiburcio - Aquí está en el Tab 1 después del login. Se demuestra que lee bien el token obtenido en el tab 2.")
           this.logged= true;
         } else {
+          console.log("no está logeado")
           this.logged= false;
         }
       });
